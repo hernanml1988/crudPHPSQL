@@ -1,15 +1,3 @@
-<?php
-
-$host = "localhost";
-$usuario = "root";
-$pass = "";
-$bd = "crudproductos";
-
-$conexion = mysqli_connect($host, $usuario, $pass, $bd);
-
-                                          
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,10 +16,13 @@ $conexion = mysqli_connect($host, $usuario, $pass, $bd);
         style="width: 1200px; height: 600px; border: 1px solid blue; display: flex; justify-content: center; align-items: center;">
 
         <div class="container_form">
-            <h1>Agregar Productos</h1>
+            <div class="titulo_form">
+                <h1>Agregar Productos</h1>
+            </div>
+
             <form action="backend_agregar_editar.php" method="post">
 
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" autocomplete="off">
 
                 <select name="categoria" id="categoria">
                     <option value="0">--</option>
@@ -48,7 +39,7 @@ $conexion = mysqli_connect($host, $usuario, $pass, $bd);
                 <input type="number" name="cantidad" id="cantidad" placeholder="Cantidad">
                 <input type="number" name="precio" id="precio" placeholder="Precio">
 
-                <button type="submit" class="btn btn-outline-primary" name="agregar">Agregar</button>
+                <button type="submit" class="boton_agregar" name="agregar">Agregar</button>
             </form>
 
         </div>

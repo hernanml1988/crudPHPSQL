@@ -1,7 +1,23 @@
+body{
+    background: radial-gradient(
+         rgb(46, 46, 230), rgb(83, 83, 219),rgb(120, 120, 196), rgb(177, 177, 223));
+         
+         display: flex;
+         justify-content: center;
+         align-items: center;
+}
 
+.container{
+    margin-top: 25px;
+    border-radius: 25px;
+    background: rgb(82, 82, 188);
+    padding: 0px 25px;
+    overflow: auto;
+}
 
-/*Estilos vista agregar_productos*/
-
+label{
+    color:white
+}
 
 .container_form > form{
     /* border: 1px solid red; */
@@ -10,17 +26,106 @@
     gap: 10px;
     justify-content: center;
     align-items: center;
-    width: 500px;
-    height: 500px;
+    width: 350px;
+    height: auto;
+    padding: 30px 0px;
+    background: linear-gradient(20deg, grey, rgb(21, 21, 21), grey);
+    box-shadow: 0px 0px 10px 3px rgb(69, 69, 69);
+    border-radius: 25px;
+    
 }
 
-form{
-    border: 1px solid yellow;
+
+.container_form > form > input, .container_form > form > select{
+    background: transparent;
+    margin: 5px 5px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    text-justify: auto;
+    
+}
+
+.container_form > form > select *{
+    background-color: rgb(79, 78, 78);
 }
 
 
 
+/*Estilos vista index*/
 
+.container_table{
+    margin: 25px 25px;
+    padding: 20px 30px;
+    border: 1px solid rgb(37, 37, 117);
+    border-radius: 25px;  
+    box-shadow: 0px 0px 5px 3px rgb(25, 25, 71);  
+    opacity: 0.8;
+    min-height: 200px;
+}
 
+.table *{
+    color: white !important;
+    text-align: center;
+    
+    
+}
 
-/*********************************************************************/
+.titulo_container{
+     
+    padding: 5px 5px ;
+    text-align: center;
+    color: aliceblue;
+}
+
+.btn_Agregar{
+    width: 217px;
+    border: 1px solid white;
+    padding: 15px 20px;
+    border-radius: 25px;
+    color: white;
+    margin: 10px 27px;
+    background: linear-gradient(45deg, #1029a8, transparent, #1029a8);
+}
+
+.btn_Editar{
+    width: 79px;
+    border: 1px solid white;
+    padding: 6px 19px;
+    border-radius: 18px;
+    background: linear-gradient(45deg, #eeff00,#ccd63c, #000000, #ccd63c, #eeff00);
+}
+
+.btn_Eliminar{
+    width: 85px;
+    border: 1px solid white;
+    padding: 6px 14px;
+    border-radius: 18px;
+    background: linear-gradient(110deg, #fc0101,#f44242, #000000, #f44242, #fc0101);
+}
+
+.boton_agregar{
+    width: 94px;
+    border-radius: 10px;
+    background: linear-gradient(45deg,transparent, #858181, transparent);
+    color: white;
+    border: 1px solid white;
+    padding: 2px 0px;
+}
+
+.boton_editar{
+    width: 94px;
+    border-radius: 10px;
+    background: linear-gradient(45deg,transparent, #858181, transparent);
+    color: white;
+    border: 1px solid white;
+    padding: 2px 0px;
+}
+
+.titulo_form{
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+    text-decoration: underline;
+
+}

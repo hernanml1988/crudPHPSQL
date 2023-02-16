@@ -8,7 +8,9 @@ $bd = "crudproductos";
 
 $conexion = mysqli_connect($host, $usuario, $pass, $bd);
 
-if(isset($_POST['agregar'])){
+/* En esta sección de codigo consultamos que botón utilizaremos */
+
+if(isset($_POST['agregar'])){ //consultamos si se ha oprimido el botón agregar
     
     if(!$conexion){
         echo "No hay conexion";
@@ -27,20 +29,17 @@ if(isset($_POST['agregar'])){
     if($consulta){
         header("Location: index.php");
     }
-}
-// echo $_POST['agregar']  ;
-if(isset($_POST['editar'])){
+}else if(isset($_POST['editar'])){ //consultamos si se ha oprimido el botón editar
     
     if(!$conexion){
         echo "No hay conexion";
     }
     $id = $_POST['id'];
     $nombre = $_POST['nombre'];
-    $categoria = $_POST['categoria'];
     $cantidad = $_POST['cantidad'];
     $precio = $_POST['precio'];
     
-    $q = "UPDATE productos set nombre = '$nombre', categoria = '$categoria', cantidad = '$cantidad', precio = '$precio'
+    $q = "UPDATE productos set nombre = '$nombre', cantidad = '$cantidad', precio = '$precio'
         where id = '$id' ";
    
     $consulta = mysqli_query($conexion, $q);

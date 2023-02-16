@@ -32,27 +32,32 @@ $row = mysqli_fetch_array($resultado);
         style="width: 1200px; height: 600px; border: 1px solid blue; display: flex; justify-content: center; align-items: center;">
 
         <div class="container_form">
-            <h1>Editar Productos</h1>
+            <div class="titulo_form">
+                <h1>Editar Productos</h1>
+            </div>
+
             <form action="backend_agregar_editar.php" method="post">
                 <input type="text" name="id" id="id" value="<?php echo$row['id']?>" hidden>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre" value="<?php echo$row['nombre']?>">
-
-                <select name="categoria" id="categoria">
-                    <option value="0">--</option>
-                    <option value="bebestible">Bebestible</option>
-                    <option value="abarrotes">Abarrotes</option>
-                    <option value="lacteos">Lacteos</option>
-                    <option value="licores">Licores</option>
-                    <option value="cecinas">Cecinas</option>
+                <label for="">Nombre</label>
+                <input type="text" name="nombre" id="nombre" autocomplete="off" placeholder="Nombre"
+                    value="<?php echo$row['nombre']?>">
 
 
-                </select>
 
+                <label for="">Categoria</label>
+                <input type="text" name="categoria" disabled id="categoria" autocomplete="off"
+                    value="<?php echo$row['categoria']?>">
+
+
+
+
+                <label for="">Cantidad</label>
                 <input type="number" name="cantidad" id="cantidad" placeholder="Cantidad"
                     value="<?php echo$row['cantidad']?>">
+                <label for="">Precio</label>
                 <input type="number" name="precio" id="precio" placeholder="Precio" value="<?php echo$row['precio']?>">
 
-                <button type="submit" class="btn btn-outline-primary" name="editar">Modificar</button>
+                <button type="submit" class="boton_editar" name="editar">Modificar</button>
             </form>
 
         </div>
